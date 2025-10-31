@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: embedding-client-demo
+  
+  # OpenAI 설정
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY:your-api-key-here}
+      # Chat 설정
+      chat:
+        options:
+          model: gpt-4
+          temperature: 0.7
+          max-tokens: 1000
+      # Embedding 설정
+      embedding:
+        options:
+          model: text-embedding-ada-002  # 또는 text-embedding-3-small, text-embedding-3-large
+
+server:
+  port: 9000
+
+logging:
+  level:
+    com.example.springai: DEBUG
+    org.springframework.ai: DEBUG
+

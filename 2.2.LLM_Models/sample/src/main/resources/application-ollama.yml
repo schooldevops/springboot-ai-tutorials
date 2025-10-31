@@ -1,0 +1,17 @@
+# Ollama 전용 설정 (로컬 개발용)
+spring:
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        options:
+          model: llama2        # Ollama에서 다운로드한 모델 이름
+          temperature: 0.7
+          max-tokens: 1000
+
+# OpenAI 비활성화 (Ollama만 사용)
+# spring:
+#   ai:
+#     openai:
+#       api-key: ${OPENAI_API_KEY}
+

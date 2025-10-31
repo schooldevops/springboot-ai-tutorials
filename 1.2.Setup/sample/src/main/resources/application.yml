@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: spring-ai-app
+  
+  # OpenAI 설정
+  ai:
+    openai:
+      # 환경 변수에서 API Key 읽기 (권장)
+      api-key: ${OPENAI_API_KEY:your-api-key-here}
+      chat:
+        options:
+          model: gpt-4          # 또는 gpt-3.5-turbo
+          temperature: 0.7      # 0.0 ~ 2.0 (창의성 조절)
+          max-tokens: 1000      # 최대 토큰 수
+          top-p: 1.0
+          frequency-penalty: 0.0
+          presence-penalty: 0.0
+
+# Anthropic (Claude) 사용 시 - OpenAI 주석 처리 후 사용
+# spring:
+#   ai:
+#     anthropic:
+#       api-key: ${ANTHROPIC_API_KEY}
+#       chat:
+#         options:
+#           model: claude-3-sonnet-20240229
+#           temperature: 0.7
+#           max-tokens: 1000
+
+# Ollama 사용 시 (로컬 LLM) - OpenAI 주석 처리 후 사용
+# spring:
+#   ai:
+#     ollama:
+#       base-url: http://localhost:11434
+#       chat:
+#         options:
+#           model: llama2        # 또는 mistral, codellama 등
+#           temperature: 0.7
+
+server:
+  port: 9000
+
+logging:
+  level:
+    com.example.springai: DEBUG
+    org.springframework.ai: DEBUG
+
