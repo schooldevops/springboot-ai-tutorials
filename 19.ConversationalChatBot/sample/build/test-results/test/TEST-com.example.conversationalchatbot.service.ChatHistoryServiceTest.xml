@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.conversationalchatbot.service.ChatHistoryServiceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-11-22T03:56:27" hostname="NHY9M72K9J" time="0.03">
+  <properties/>
+  <testcase name="should clear history for specific session()" classname="com.example.conversationalchatbot.service.ChatHistoryServiceTest" time="0.027"/>
+  <testcase name="should return empty list for non-existent session()" classname="com.example.conversationalchatbot.service.ChatHistoryServiceTest" time="0.001"/>
+  <testcase name="should maintain separate histories for different sessions()" classname="com.example.conversationalchatbot.service.ChatHistoryServiceTest" time="0.002"/>
+  <testcase name="should store and retrieve chat history()" classname="com.example.conversationalchatbot.service.ChatHistoryServiceTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

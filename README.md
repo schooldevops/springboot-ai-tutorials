@@ -161,7 +161,7 @@
 
 *핵심 키워드*: Function Calling, Tool, @Bean 등록, ChatOptions
 
-### 9.2: Function Calling을 통한 외부 API 연동
+ㅊㅇ
 
 *학습 목표*: '날씨 묻기', '주문 상태 확인' 등 LLM이 직접 처리할 수 없는 요청을 Function Calling을 통해 외부 API(또는 서비스)와 연동하여 처리합니다.
 

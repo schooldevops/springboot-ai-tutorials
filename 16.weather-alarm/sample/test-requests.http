@@ -1,0 +1,54 @@
+### Health Check
+GET http://localhost:8080/api/weather/health
+
+###
+
+### Chat - 서울 날씨
+POST http://localhost:8080/api/weather/chat
+Content-Type: application/json
+
+{
+  "message": "오늘 서울 날씨 어때?"
+}
+
+###
+
+### Chat - 부산 날씨
+POST http://localhost:8080/api/weather/chat
+Content-Type: application/json
+
+{
+  "message": "부산 날씨 알려줘"
+}
+
+###
+
+### Chat - 제주도 날씨
+POST http://localhost:8080/api/weather/chat
+Content-Type: application/json
+
+{
+  "message": "제주도 날씨는 어떤가요?"
+}
+
+###
+
+### Chat - 날씨 기반 조언
+POST http://localhost:8080/api/weather/chat
+Content-Type: application/json
+
+{
+  "message": "서울 날씨 보고 우산 필요한지 알려줘"
+}
+
+###
+
+### Chat - 옷차림 추천
+POST http://localhost:8080/api/weather/chat
+Content-Type: application/json
+
+{
+  "message": "오늘 서울 날씨에 맞는 옷차림 추천해줘"
+}
+
+###

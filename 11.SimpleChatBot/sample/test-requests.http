@@ -1,0 +1,79 @@
+### Health Check
+GET http://localhost:8080/api/chat/health
+
+###
+
+### 1. Simple Chat - Spring AI 질문
+POST http://localhost:8080/api/chat/simple
+Content-Type: application/json
+
+{
+  "message": "Spring AI가 무엇인가요?"
+}
+
+###
+
+### 2. Simple Chat - Kotlin 질문
+POST http://localhost:8080/api/chat/simple
+Content-Type: application/json
+
+{
+  "message": "Kotlin의 주요 특징 3가지를 알려주세요."
+}
+
+###
+
+### 3. Template Chat - Kotlin 전문가
+POST http://localhost:8080/api/chat/template
+Content-Type: application/json
+
+{
+  "message": "data class와 일반 class의 차이점은 무엇인가요?",
+  "topic": "Kotlin 프로그래밍"
+}
+
+###
+
+### 4. Template Chat - Spring Boot 전문가
+POST http://localhost:8080/api/chat/template
+Content-Type: application/json
+
+{
+  "message": "@RestController와 @Controller의 차이점은?",
+  "topic": "Spring Boot"
+}
+
+###
+
+### 5. Role-based Chat - 백엔드 아키텍트
+POST http://localhost:8080/api/chat/role
+Content-Type: application/json
+
+{
+  "message": "REST API 설계 시 주의할 점은 무엇인가요?",
+  "role": "당신은 20년 경력의 백엔드 아키텍트입니다. 실무 경험을 바탕으로 구체적이고 실용적인 조언을 제공합니다."
+}
+
+###
+
+### 6. Role-based Chat - 친절한 선생님
+POST http://localhost:8080/api/chat/role
+Content-Type: application/json
+
+{
+  "message": "프로그래밍을 처음 배우는데 어떤 언어부터 시작하면 좋을까요?",
+  "role": "당신은 초보자를 가르치는 것을 좋아하는 친절한 프로그래밍 선생님입니다. 쉽고 이해하기 쉬운 설명을 제공합니다."
+}
+
+###
+
+### 7. Role-based Chat - 시니어 개발자
+POST http://localhost:8080/api/chat/role
+Content-Type: application/json
+
+{
+  "message": "마이크로서비스 아키텍처의 장단점을 설명해주세요.",
+  "role": "당신은 대규모 시스템을 설계하고 운영한 경험이 풍부한 시니어 개발자입니다. 실제 경험을 바탕으로 현실적인 조언을 제공합니다."
+}
+
+###

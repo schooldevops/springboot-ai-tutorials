@@ -1,0 +1,84 @@
+### Health Check
+GET http://localhost:9000/api/resume/health
+
+###
+
+### 1. Basic Resume Info - 백엔드 개발자
+POST http://localhost:9000/api/resume/basic
+Content-Type: application/json
+
+{
+  "resumeText": "홍길동\n이메일: hong.gildong@example.com\n전화: 010-1234-5678\n\n경력: ABC 테크놀로지, 시니어 백엔드 개발자, 2021-03 ~ 현재\nXYZ 소프트웨어, 백엔드 개발자, 2019-01 ~ 2021-02\n\n학력: 서울대학교 컴퓨터공학과 학사 2018년 졸업"
+}
+
+###
+
+### 2. Full Resume Analysis - 백엔드 개발자
+POST http://localhost:9000/api/resume/analyze
+Content-Type: application/json
+
+{
+  "resumeText": "홍길동\n이메일: hong.gildong@example.com\n전화: 010-1234-5678\n주소: 서울시 강남구\n\n요약: 5년 경력의 백엔드 개발자로 Spring Boot와 Kotlin을 활용한 마이크로서비스 아키텍처 설계 및 구현 경험이 있습니다.\n\n경력:\nABC 테크놀로지\n- 직책: 시니어 백엔드 개발자\n- 기간: 2021-03 ~ 현재\n- 업무: Spring Boot 기반 REST API 개발, Kotlin을 활용한 마이크로서비스 구현\n\nXYZ 소프트웨어\n- 직책: 백엔드 개발자\n- 기간: 2019-01 ~ 2021-02\n- 업무: Java Spring Framework 기반 웹 애플리케이션 개발\n\n학력:\n- 서울대학교, 컴퓨터공학과, 학사, 2018년 졸업\n- KAIST, 소프트웨어공학, 석사, 2020년 졸업\n\n기술 스택:\nBackend: Kotlin, Java, Spring Boot\nDatabase: PostgreSQL, MySQL, Redis\nDevOps: Docker, Kubernetes, Jenkins\nCloud: AWS"
+}
+
+###
+
+### 3. Extract Skills Only
+POST http://localhost:9000/api/resume/extract-skills
+Content-Type: application/json
+
+{
+  "resumeText": "기술 스택:\n- Backend: Kotlin, Java, Spring Boot, Spring Framework\n- Database: PostgreSQL, MySQL, Redis\n- DevOps: Docker, Kubernetes, Jenkins, GitHub Actions\n- Cloud: AWS (EC2, RDS, S3), GCP\n- Tools: Git, IntelliJ IDEA, Gradle"
+}
+
+###
+
+### 4. Extract Work Experience Only
+POST http://localhost:9000/api/resume/extract-experience
+Content-Type: application/json
+
+{
+  "resumeText": "경력:\n\n1. ABC 테크놀로지 (2021-03 ~ 현재)\n   직책: 시니어 백엔드 개발자\n   - Spring Boot 기반 REST API 개발\n   - Kotlin을 활용한 마이크로서비스 구현\n   - PostgreSQL 데이터베이스 설계 및 최적화\n\n2. XYZ 소프트웨어 (2019-01 ~ 2021-02)\n   직책: 백엔드 개발자\n   - Java Spring Framework 기반 웹 애플리케이션 개발\n   - MySQL 데이터베이스 관리"
+}
+
+###
+
+### 5. Full Resume - 풀스택 개발자
+POST http://localhost:9000/api/resume/analyze
+Content-Type: application/json
+
+{
+  "resumeText": "김영희\nEmail: kim.younghee@email.com\nPhone: 010-9876-5432\n\nSummary: 3년차 풀스택 개발자. React와 Node.js를 활용한 웹 애플리케이션 개발 전문.\n\nWork Experience:\n1. 스타트업 DEF (2022-06 ~ Present)\n   Position: 풀스택 개발자\n   - React 기반 SPA 개발\n   - Node.js/Express REST API 구현\n   - MongoDB 데이터 모델링\n\n2. 프리랜서 (2021-01 ~ 2022-05)\n   - 다양한 웹 프로젝트 수행\n   - React, Vue.js 프론트엔드 개발\n\nEducation:\n- 연세대학교, 정보시스템학과, 학사 (2020)\n\nSkills:\nFrontend: React, Vue.js, TypeScript, HTML/CSS\nBackend: Node.js, Express, NestJS\nDatabase: MongoDB, PostgreSQL\nDevOps: Docker, AWS"
+}
+
+###
+
+### 6. Simple Resume - 신입 개발자
+POST http://localhost:9000/api/resume/analyze
+Content-Type: application/json
+
+{
+  "resumeText": "이철수\n연락처: lee.cs@gmail.com / 010-5555-1234\n\n자기소개: 컴퓨터공학을 전공한 신입 개발자입니다.\n\n학력: 고려대학교 컴퓨터공학과 졸업 (2024년 2월)\n\n기술: Java, Spring Boot, JavaScript, React, MySQL, Git, Linux"
+}
+
+###
+
+### 7. Data Engineer Resume
+POST http://localhost:9000/api/resume/analyze
+Content-Type: application/json
+
+{
+  "resumeText": "박민수\nEmail: park.minsu@data.com\nTel: 010-7777-8888\n\nProfile: 데이터 파이프라인 구축 및 빅데이터 처리 전문 데이터 엔지니어 (4년 경력)\n\nCareer:\n빅데이터 컴퍼니 (2020-07 ~ 현재)\n직책: 데이터 엔지니어\n- Apache Spark를 활용한 대용량 데이터 처리\n- Airflow로 데이터 파이프라인 자동화\n- AWS EMR, Redshift 운영\n\n데이터 스타트업 (2019-03 ~ 2020-06)\n직책: 주니어 데이터 엔지니어\n- ETL 파이프라인 개발\n\nEducation: 성균관대학교 통계학과 학사 (2019)\n\nTechnical Skills:\nLanguages: Python, Scala, SQL\nBig Data: Apache Spark, Hadoop, Kafka\nCloud: AWS (EMR, Redshift, S3)"
+}
+
+###
+
+### 8. Mobile Developer - Simple
+POST http://localhost:9000/api/resume/basic
+Content-Type: application/json
+
+{
+  "resumeText": "최지은\n이메일: choi.jieun@example.com\n전화번호: 010-3333-4444\n\n경력: 모바일 개발자, 테크 스타트업, 2021년부터 현재까지\n주요 업무: Flutter를 사용한 크로스플랫폼 모바일 앱 개발\n\n학력: 이화여대 소프트웨어학부 졸업 (2021)\n\n기술: Flutter, Dart, Firebase, iOS, Android, Git"
+}
+
+###

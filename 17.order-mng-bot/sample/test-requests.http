@@ -1,0 +1,80 @@
+### Health Check
+GET http://localhost:8080/api/orders/health
+
+###
+
+### Reset Conversation
+POST http://localhost:8080/api/orders/reset
+
+###
+
+### Get Conversation History
+GET http://localhost:8080/api/orders/history
+
+###
+
+### Turn 1: 주문 상태 조회
+POST http://localhost:8080/api/orders/chat
+Content-Type: application/json
+
+{
+  "message": "주문 12345 상태 알려줘"
+}
+
+###
+
+### Turn 2: 배송지 변경
+POST http://localhost:8080/api/orders/chat
+Content-Type: application/json
+
+{
+  "message": "배송지를 제주시 제주대로 999로 변경해줘"
+}
+
+###
+
+### Turn 3: 주문 취소
+POST http://localhost:8080/api/orders/chat
+Content-Type: application/json
+
+{
+  "message": "이 주문 취소할래"
+}
+
+###
+
+### New Conversation: 다른 주문 조회
+POST http://localhost:8080/api/orders/chat
+Content-Type: application/json
+
+{
+  "message": "주문 67890 어떻게 되고 있어?"
+}
+
+###
+
+### Multi-turn Scenario
+# 1. Reset conversation
+POST http://localhost:8080/api/orders/reset
+
+###
+
+# 2. Check order status
+POST http://localhost:8080/api/orders/chat
+Content-Type: application/json
+
+{
+  "message": "주문 11111 상태 확인해줘"
+}
+
+###
+
+# 3. Change address (AI should remember order ID from previous turn)
+POST http://localhost:8080/api/orders/chat
+Content-Type: application/json
+
+{
+  "message": "배송지를 서울시 종로구로 바꿔줘"
+}
+
+###

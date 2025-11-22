@@ -1,0 +1,90 @@
+### Health Check
+GET http://localhost:9000/api/rag/health
+
+###
+
+### Document Status
+GET http://localhost:9000/api/rag/documents/status
+
+###
+
+### Manual Refresh
+POST http://localhost:9000/api/rag/refresh
+
+###
+
+### Ask Question - 재택근무 정책
+POST http://localhost:9000/api/rag/ask
+Content-Type: application/json
+
+{
+  "question": "회사의 재택근무 정책은 무엇인가요?",
+  "topK": 3
+}
+
+###
+
+### Ask Question - 휴가 정책
+POST http://localhost:9000/api/rag/ask
+Content-Type: application/json
+
+{
+  "question": "연차는 몇 일이고 어떻게 사용하나요?",
+  "topK": 3
+}
+
+###
+
+### Ask Question - 백엔드 기술
+POST http://localhost:9000/api/rag/ask
+Content-Type: application/json
+
+{
+  "question": "우리 회사에서 사용하는 백엔드 기술 스택은 무엇인가요?",
+  "topK": 3
+}
+
+###
+
+### Ask Question - 데이터베이스
+POST http://localhost:9000/api/rag/ask
+Content-Type: application/json
+
+{
+  "question": "어떤 데이터베이스를 사용하나요?",
+  "topK": 3
+}
+
+###
+
+### Ask Question - 코딩 컨벤션
+POST http://localhost:9000/api/rag/ask
+Content-Type: application/json
+
+{
+  "question": "Kotlin 코딩 컨벤션에서 클래스 네이밍 규칙은?",
+  "topK": 3
+}
+
+###
+
+### Ask Question - Git 커밋
+POST http://localhost:9000/api/rag/ask
+Content-Type: application/json
+
+{
+  "question": "Git 커밋 메시지 형식은 어떻게 작성하나요?",
+  "topK": 3
+}
+
+###
+
+### Ask Question (GET) - 복지 제도
+GET http://localhost:9000/api/rag/ask?question=회사의 복지 제도는 무엇이 있나요?&topK=3
+
+###
+
+### Ask Question (GET) - CI/CD
+GET http://localhost:9000/api/rag/ask?question=CI/CD 도구는 무엇을 사용하나요?&topK=3
+
+###

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.productimagetag.service.ImageAnalysisServiceTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-11-22T03:52:04" hostname="NHY9M72K9J" time="0.569">
+  <properties/>
+  <testcase name="should handle empty image()" classname="com.example.productimagetag.service.ImageAnalysisServiceTest" time="0.015"/>
+  <testcase name="should analyze image and return product tags()" classname="com.example.productimagetag.service.ImageAnalysisServiceTest" time="0.553"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

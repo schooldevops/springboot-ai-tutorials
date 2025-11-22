@@ -1,0 +1,155 @@
+### Health Check
+GET http://localhost:9000/api/wiki/health
+
+###
+
+### 1. Ingest Documents (Directory)
+POST http://localhost:9000/api/wiki/ingest
+Content-Type: application/json
+
+{
+  "directory": "wiki-documents"
+}
+
+###
+
+### 2. Ingest Single File
+POST http://localhost:9000/api/wiki/ingest/file
+Content-Type: application/json
+
+{
+  "filePath": "wiki-documents/company-policy.md"
+}
+
+###
+
+### 3. Ask Question - 재택근무 정책
+POST http://localhost:9000/api/wiki/ask
+Content-Type: application/json
+
+{
+  "question": "회사의 재택근무 정책은 무엇인가요?",
+  "topK": 3
+}
+
+###
+
+### 4. Ask Question - 휴가 정책
+POST http://localhost:9000/api/wiki/ask
+Content-Type: application/json
+
+{
+  "question": "연차는 몇 일이고 어떻게 사용하나요?",
+  "topK": 3
+}
+
+###
+
+### 5. Ask Question - 기술 스택
+POST http://localhost:9000/api/wiki/ask
+Content-Type: application/json
+
+{
+  "question": "우리 회사에서 사용하는 백엔드 기술 스택은 무엇인가요?",
+  "topK": 3
+}
+
+###
+
+### 6. Ask Question - 데이터베이스
+POST http://localhost:9000/api/wiki/ask
+Content-Type: application/json
+
+{
+  "question": "어떤 데이터베이스를 사용하나요?",
+  "topK": 3
+}
+
+###
+
+### 7. Ask Question - 코딩 컨벤션
+POST http://localhost:9000/api/wiki/ask
+Content-Type: application/json
+
+{
+  "question": "Kotlin 코딩 컨벤션에서 클래스 네이밍 규칙은?",
+  "topK": 3
+}
+
+###
+
+### 8. Ask Question - Git 커밋 메시지
+POST http://localhost:9000/api/wiki/ask
+Content-Type: application/json
+
+{
+  "question": "Git 커밋 메시지 형식은 어떻게 작성하나요?",
+  "topK": 3
+}
+
+###
+
+### 9. Ask Question - 출장 경비
+POST http://localhost:9000/api/wiki/ask
+Content-Type: application/json
+
+{
+  "question": "출장 시 경비 처리는 어떻게 하나요?",
+  "topK": 3
+}
+
+###
+
+### 10. Ask Question - 장비 지원
+POST http://localhost:9000/api/wiki/ask
+Content-Type: application/json
+
+{
+  "question": "입사 시 어떤 장비를 지급받나요?",
+  "topK": 3
+}
+
+###
+
+### 11. Ask Question (GET) - 복지 제도
+GET http://localhost:9000/api/wiki/ask?question=회사의 복지 제도는 무엇이 있나요?&topK=3
+
+###
+
+### 12. Ask Question (GET) - CI/CD
+GET http://localhost:9000/api/wiki/ask?question=CI/CD 도구는 무엇을 사용하나요?&topK=3
+
+###
+
+### 13. Ask Question - 프로덕션 장애
+POST http://localhost:9000/api/wiki/ask
+Content-Type: application/json
+
+{
+  "question": "프로덕션 장애가 발생하면 어떻게 대응해야 하나요?",
+  "topK": 5
+}
+
+###
+
+### 14. Ask Question - 코드 리뷰
+POST http://localhost:9000/api/wiki/ask
+Content-Type: application/json
+
+{
+  "question": "코드 리뷰는 얼마나 빨리 해야 하나요?",
+  "topK": 3
+}
+
+###
+
+### 15. Ask Question - 배포 환경
+POST http://localhost:9000/api/wiki/ask
+Content-Type: application/json
+
+{
+  "question": "배포 환경은 어떻게 구성되어 있나요?",
+  "topK": 3
+}
+
+###

@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: resume-analyzer
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY:your-api-key-here}
+      chat:
+        options:
+          model: gpt-4o-mini
+          temperature: 0.3
+
+server:
+  port: 9000
+
+logging:
+  level:
+    org.springframework.ai: DEBUG
