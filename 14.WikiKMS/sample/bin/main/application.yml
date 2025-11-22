@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: wiki-chatbot
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY:your-api-key-here}
+      embedding:
+        options:
+          model: text-embedding-ada-002
+      chat:
+        options:
+          model: gpt-4o-mini
+          temperature: 0.7
+
+server:
+  port: 9000
+
+# 문서 설정
+wiki:
+  documents:
+    directory: wiki-documents
+    chunk-size: 500
+    chunk-overlap: 50
+
+logging:
+  level:
+    org.springframework.ai: DEBUG

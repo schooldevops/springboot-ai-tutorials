@@ -1,0 +1,20 @@
+### System Only
+GET http://localhost:9000/api/basic/system-only
+
+### POST user
+POST http://localhost:9000/api/basic/system-user
+Content-Type: application/json
+
+{"message": "안녕하세요!, 오늘은 좋은 하루 되세요!"}
+
+### conversation
+POST http://localhost:9000/api/basic/conversation
+
+### Teacher
+POST http://localhost:9000/api/role/chat 
+Content-Type: application/json
+
+{
+    "role": "teacher",
+    "message": "수학을 어떻게 공부하면 좋을까요?"
+}

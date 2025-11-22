@@ -25,11 +25,12 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     
     // Spring AI OpenAI
-    implementation("org.springframework.ai:spring-ai-openai-spring-boot-starter:1.0.0-M6")
+    // implementation("org.springframework.ai:spring-ai-openai-spring-boot-starter:1.0.0-M6")
+    implementation("org.springframework.ai:spring-ai-ollama-spring-boot-starter:1.0.0-M6")
     
     // Kotlin
     implementation("org.jetbrains.kotlin:kotlin-reflect")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib")
     
     // Jackson (JSON 처리)
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")

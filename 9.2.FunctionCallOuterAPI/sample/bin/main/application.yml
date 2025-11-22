@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: function-call-outer-api-demo
+  
+  # OpenAI 설정
+#  ai:
+#    openai:
+#      api-key: ${OPENAI_API_KEY:your-api-key-here}
+#      chat:
+#        options:
+#          model: gpt-4          # 또는 gpt-3.5-turbo
+#          temperature: 0.7
+#          max-tokens: 1000
+  
+  # Ollama 설정 (로컬 LLM)
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        options:
+          model: llama2
+          temperature: 0.7
+          max-tokens: 1000
+
+server:
+  port: 9000
+
+logging:
+  level:
+    com.example.springai: DEBUG
+    org.springframework.ai: DEBUG
+

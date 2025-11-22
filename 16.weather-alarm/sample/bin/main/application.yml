@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: weather-alarm
+  ai:
+    ollama:
+      base-url: ${OLLAMA_BASE_URL:http://localhost:11434}
+      chat:
+        options:
+          model: ${OLLAMA_CHAT_MODEL:llama3.2}
+          temperature: 0.7
+          functions: getWeather
+
+server:
+  port: 8080
+
+# Weather API 설정
+weather:
+  api:
+    key: ${WEATHER_API_KEY:your-api-key-here}
+    base-url: https://api.openweathermap.org/data/2.5
+    timeout: 5000
+
+logging:
+  level:
+    org.springframework.ai: DEBUG
+    com.example.weatheralarm: INFO
