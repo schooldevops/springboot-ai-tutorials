@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: embedding-openai-sample
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      embedding:
+        options:
+          model: text-embedding-3-small # or text-embedding-3-large, text-embedding-ada-002
+          dimensions: 1536
+server:
+  port: 9303
+logging:
+  level:
+    org.springframework.ai: DEBUG

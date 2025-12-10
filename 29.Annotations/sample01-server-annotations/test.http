@@ -1,0 +1,24 @@
+### Calculate (@McpTool)
+POST http://localhost:9900/api/mcp/tool/calculate
+Content-Type: application/json
+
+{
+  "a": 15,
+  "b": 3,
+  "operation": "multiply"
+}
+
+###
+
+### Get System Info (@McpResource)
+GET http://localhost:9900/api/mcp/resource/system-info
+
+###
+
+### Get Prompt Template (@McpPrompt)
+GET http://localhost:9900/api/mcp/prompt/greeting
+
+###
+
+### Get Info
+GET http://localhost:9900/api/mcp/info

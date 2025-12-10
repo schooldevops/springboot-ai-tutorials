@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: mcpserver-basic-sample
+  ai:
+    mcp:
+      server:
+        enabled: true
+        name: "Basic MCP Server"
+        version: "1.0.0"
+        description: "A basic MCP server example"
+server:
+  port: 9800
+logging:
+  level:
+    org.springframework.ai: DEBUG

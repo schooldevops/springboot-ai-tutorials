@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: image-openai-sample
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      image:
+        options:
+          model: dall-e-3
+          quality: hd # standard or hd
+          style: vivid # vivid or natural
+          width: 1024
+          height: 1024
+server:
+  port: 9400
+logging:
+  level:
+    org.springframework.ai: DEBUG

@@ -1,0 +1,38 @@
+### Search with YAML format (returns pure YAML strings)
+POST http://localhost:8090/api/spec/search
+Content-Type: application/json
+
+{
+  "query": "How to get inventory",
+  "topK": 2,
+  "responseFormat": "yaml"
+}
+
+### Search with Meta format (returns SearchResult objects)
+POST http://localhost:8090/api/spec/search
+Content-Type: application/json
+
+{
+  "query": "How to get inventory",
+  "topK": 2,
+  "responseFormat": "meta"
+}
+
+### Search without responseFormat (defaults to meta)
+POST http://localhost:8090/api/spec/search
+Content-Type: application/json
+
+{
+  "query": "How to get pets by status",
+  "topK": 1
+}
+
+### Search for component with YAML format
+POST http://localhost:8090/api/spec/search
+Content-Type: application/json
+
+{
+  "query": "Pet schema",
+  "topK": 1,
+  "responseFormat": "yaml"
+}

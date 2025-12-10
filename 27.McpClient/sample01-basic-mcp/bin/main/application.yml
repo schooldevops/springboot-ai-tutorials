@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: mcp-basic-sample
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+          model: gpt-4o-mini
+    mcp:
+      client:
+        enabled: true
+        # Example MCP server configuration
+        # my-server:
+        #   transport:
+        #     stdio:
+        #       command: "npx"
+        #       args: ["-y", "@modelcontextprotocol/server-filesystem", "/tmp"]
+server:
+  port: 9700
+logging:
+  level:
+    org.springframework.ai: DEBUG

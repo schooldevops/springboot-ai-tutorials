@@ -1,0 +1,12 @@
+openapi: 3.0.0
+info:
+  title: API Specification
+  version: 1.0.0
+paths:
+  /store/inventory:
+    get:
+      operationId: getInventory
+      summary: Returns pet inventories by status
+      description: Returns a map of status codes to quantities
+      tags:
+        - store

@@ -1,0 +1,79 @@
+### Health Check
+GET http://localhost:8090/api/spec/health
+
+### Upload Petstore Spec (from file - use in IDE)
+POST http://localhost:8090/api/spec/upload
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="file"; filename="petstore.yaml"
+Content-Type: application/x-yaml
+
+< ./src/main/resources/petstore.yaml
+--boundary--
+
+### Get Stats
+GET http://localhost:8090/api/spec/stats
+
+### Search: How to get list of pets
+POST http://localhost:8090/api/spec/search
+Content-Type: application/json
+
+{
+  "query": "How do I get a list of pets?",
+  "topK": 5,
+  "includeRelatedSchemas": true
+}
+
+### Search: Pet model structure
+POST http://localhost:8090/api/spec/search
+Content-Type: application/json
+
+{
+  "query": "What is the Pet model structure?",
+  "topK": 3,
+  "includeRelatedSchemas": false
+}
+
+### Search: Create new pet
+POST http://localhost:8090/api/spec/search
+Content-Type: application/json
+
+{
+  "query": "How to create a new pet?",
+  "topK": 5,
+  "includeRelatedSchemas": true
+}
+
+### Search: Get specific pet by ID
+POST http://localhost:8090/api/spec/search
+Content-Type: application/json
+
+{
+  "query": "Get a specific pet by ID",
+  "topK": 5,
+  "includeRelatedSchemas": true
+}
+
+### Search: API with limit parameter
+POST http://localhost:8090/api/spec/search
+Content-Type: application/json
+
+{
+  "query": "API endpoints with limit parameter",
+  "topK": 5,
+  "includeRelatedSchemas": true
+}
+
+### Search: Error handling
+POST http://localhost:8090/api/spec/search
+Content-Type: application/json
+
+{
+  "query": "Error response schema",
+  "topK": 3,
+  "includeRelatedSchemas": false
+}
+
+### Clear All Specs
+DELETE http://localhost:8090/api/spec/clear

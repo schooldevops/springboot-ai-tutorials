@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: annotations-server-sample
+  ai:
+    mcp:
+      server:
+        enabled: true
+server:
+  port: 9900
+logging:
+  level:
+    org.springframework.ai: DEBUG

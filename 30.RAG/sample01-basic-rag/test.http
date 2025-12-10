@@ -1,0 +1,42 @@
+### Ask Question
+POST http://localhost:10000/api/rag/ask
+Content-Type: application/json
+
+{
+  "question": "Spring AI란 무엇인가요?"
+}
+
+###
+
+### Ask About RAG
+POST http://localhost:10000/api/rag/ask
+Content-Type: application/json
+
+{
+  "question": "RAG가 무엇인가요?"
+}
+
+###
+
+### Ask About Company Revenue
+POST http://localhost:10000/api/rag/ask
+Content-Type: application/json
+
+{
+  "question": "2024년 회사 매출은 얼마인가요?"
+}
+
+###
+
+### Ask with Metadata
+POST http://localhost:10000/api/rag/ask-detailed
+Content-Type: application/json
+
+{
+  "question": "Vector Store에 대해 설명해주세요"
+}
+
+###
+
+### Get Info
+GET http://localhost:10000/api/rag/info

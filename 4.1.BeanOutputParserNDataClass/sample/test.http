@@ -6,17 +6,18 @@ Content-Type: application/json
     "question": "사용자 정보를 제공해주세요. 이름은 홍길동, 나이는 30, 이메일은 hong@example.com입니다."
 }
 
-###
+### GET Test
+GET http://localhost:9000/api/basic-parser/user-info
+
 
 ### Test 2: 자연어에서 정보 추출
 POST http://localhost:9000/api/basic-parser/user-info
 Content-Type: application/json
 
 {
-    "question": "안녕하세요, 저는 김철수입니다. 25살이고 이메일은 kim@test.com 입니다."
+    "question": "안녕하세요, 저는 김철수입니다. 25살이고 이메일은 kim@test.com 입니다.",
+    "mail": "kim@test.com"
 }
-
-###
 
 ### Test 3: 다른 사용자 정보
 POST http://localhost:9000/api/basic-parser/user-info

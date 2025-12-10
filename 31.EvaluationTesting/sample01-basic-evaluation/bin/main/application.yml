@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: sample01-basic-evaluation
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+          model: gpt-4o-mini
+          temperature: 0.7
+
+server:
+  port: 8081
+
+logging:
+  level:
+    org.springframework.ai: DEBUG

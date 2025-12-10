@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: embedding-batch-sample
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      embedding:
+        options:
+          model: text-embedding-3-small
+server:
+  port: 9301
+logging:
+  level:
+    org.springframework.ai: DEBUG

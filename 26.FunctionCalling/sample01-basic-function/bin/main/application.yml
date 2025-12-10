@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: function-basic-sample
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+          model: gpt-4o-mini
+server:
+  port: 9600
+logging:
+  level:
+    org.springframework.ai: DEBUG

@@ -1,0 +1,54 @@
+### 1. 기본 질문
+POST http://localhost:8084/api/rag-evaluation/ask
+Content-Type: application/json
+
+{
+  "question": "Spring AI란 무엇인가요?"
+}
+
+### 2. 질문 및 평가
+POST http://localhost:8084/api/rag-evaluation/ask-and-evaluate
+Content-Type: application/json
+
+{
+  "question": "RAG의 주요 구성요소는 무엇인가요?"
+}
+
+### 3. 상세 리포트
+POST http://localhost:8084/api/rag-evaluation/detailed-report
+Content-Type: application/json
+
+{
+  "question": "Vector Store의 역할은?"
+}
+
+### 4. 배치 평가
+POST http://localhost:8084/api/rag-evaluation/evaluate-batch
+Content-Type: application/json
+
+{
+  "questions": [
+    "Spring AI란?",
+    "RAG란 무엇인가요?",
+    "Vector Store는 어떤 역할을 하나요?"
+  ]
+}
+
+### 5. Spring Boot 관련 질문
+POST http://localhost:8084/api/rag-evaluation/ask-and-evaluate
+Content-Type: application/json
+
+{
+  "question": "Spring Boot는 언제 출시되었나요?"
+}
+
+### 6. Kotlin 관련 질문
+POST http://localhost:8084/api/rag-evaluation/ask-and-evaluate
+Content-Type: application/json
+
+{
+  "question": "Kotlin의 주요 장점은?"
+}
+
+### 7. 시스템 정보
+GET http://localhost:8084/api/rag-evaluation/info
